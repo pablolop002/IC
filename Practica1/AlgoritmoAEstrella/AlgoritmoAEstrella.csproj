@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+    <NeutralLanguage>es-ES</NeutralLanguage>
+    <Owners>Pablo López Veleiro</Owners>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.5.0.396" />  
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="Views\AboutPage.xaml" />
+    <EmbeddedResource Remove="Views\ItemDetailPage.xaml" />
+    <EmbeddedResource Remove="Views\ItemsPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Views\AboutPage.xaml.cs" />
+    <Compile Remove="Views\ItemDetailPage.xaml.cs" />
+    <Compile Remove="Themes\DarkTheme.Designer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove=".DS_Store" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Themes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Priority Queue\Priority Queue.csproj" />
+  </ItemGroup>
+</Project>

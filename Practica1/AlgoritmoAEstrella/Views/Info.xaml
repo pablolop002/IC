@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:system="clr-namespace:System;assembly=netstandard"
+             x:Class="AlgoritmoAEstrella.Views.Info"
+             BackgroundColor="{DynamicResource Background}"
+             Title="Información">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid Padding="5" RowSpacing="5" HorizontalOptions="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="110" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+
+                <Frame Grid.Row="0" Grid.Column="0" Margin="0"
+                       BackgroundColor="{DynamicResource Primary-Back-Title-Color}"
+                       CornerRadius="5" HasShadow="False">
+                    <Image Source="User" VerticalOptions="Center" Aspect="AspectFit" />
+                </Frame>
+                <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="1">
+                    <Label Text="Sobre mi" FontAttributes="Bold" TextColor="{DynamicResource Text}" />
+                    <Label TextColor="{DynamicResource LightText}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Pablo López Veleiro" />
+                                <Span Text="{x:Static system:Environment.NewLine}" />
+                                <Span Text="pablop08@ucm.es" />
+                                <Span Text="{x:Static system:Environment.NewLine}" />
+                                <Span Text="Ingeniería del Conocimiento" />
+                                <Span Text="{x:Static system:Environment.NewLine}" />
+                                <Span Text="Curso 2019/2020" />
+                                <Span Text="{x:Static system:Environment.NewLine}" />
+                                <Span Text="Grado de Ingeniería de Software" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+
+                <Frame Grid.Row="1" Grid.Column="0" Margin="0"
+                       BackgroundColor="{DynamicResource Primary-Back-Title-Color}"
+                       CornerRadius="5" HasShadow="False">
+                    <Image Source="Inicio" VerticalOptions="Center" Aspect="AspectFit" />
+                </Frame>
+                <StackLayout Orientation="Vertical" Grid.Row="1" Grid.Column="1">
+                    <Label Text="Inicio" FontAttributes="Bold" TextColor="{DynamicResource Text}" />
+                    <Label Text="Punto de partida" TextColor="{DynamicResource LightText}" />
+                </StackLayout>
+
+                <Frame Grid.Row="2" Grid.Column="0" Margin="0"
+                       BackgroundColor="{DynamicResource Primary-Back-Title-Color}"
+                       CornerRadius="5" HasShadow="False">
+                    <Image Source="Fin" VerticalOptions="Center" Aspect="AspectFit" />
+                </Frame>
+                <StackLayout Orientation="Vertical" Grid.Row="2" Grid.Column="1">
+                    <Label Text="Fin" FontAttributes="Bold" TextColor="{DynamicResource Text}" />
+                    <Label Text="Punto que se debe alcanzar" TextColor="{DynamicResource LightText}" />
+                </StackLayout>
+
+                <Frame Grid.Row="3" Grid.Column="0" Margin="0"
+                       BackgroundColor="{DynamicResource Primary-Back-Title-Color}"
+                       CornerRadius="5" HasShadow="False">
+                    <Image Source="Perro" VerticalOptions="Center" Aspect="AspectFit" />
+                </Frame>
+                <StackLayout Orientation="Vertical" Grid.Row="3" Grid.Column="1">
+                    <Label Text="Perro" FontAttributes="Bold" TextColor="{DynamicResource Text}" />
+                    <Label Text="Obstáculo que no puede ser atravesado" TextColor="{DynamicResource LightText}" />
+                </StackLayout>
+
+                <Frame Grid.Row="4" Grid.Column="0" Margin="0"
+                       BackgroundColor="{DynamicResource Primary-Back-Title-Color}"
+                       CornerRadius="5" HasShadow="False">
+                    <Image Source="Montana" VerticalOptions="Center" Aspect="AspectFit" />
+                </Frame>
+                <StackLayout Orientation="Vertical" Grid.Row="4" Grid.Column="1">
+                    <Label x:Name="MonTitle" FontAttributes="Bold" TextColor="{DynamicResource Text}" />
+                    <Label Text="Obstáculo que añade un coste adicional" TextColor="{DynamicResource LightText}" />
+                </StackLayout>
+
+                <Frame Grid.Row="5" Grid.Column="0" Margin="0"
+                       BackgroundColor="{DynamicResource Primary-Back-Title-Color}"
+                       CornerRadius="5" HasShadow="False">
+                    <Image Source="Rio" VerticalOptions="Center" Aspect="AspectFit" />
+                </Frame>
+                <StackLayout Orientation="Vertical" Grid.Row="5" Grid.Column="1">
+                    <Label x:Name="RioTitle" FontAttributes="Bold" TextColor="{DynamicResource Text}" />
+                    <Label Text="Obstáculo que añade un coste adicional" TextColor="{DynamicResource LightText}" />
+                </StackLayout>
+
+                <Frame Grid.Row="6" Grid.Column="0" Margin="0"
+                       BackgroundColor="Aquamarine"
+                       CornerRadius="5" HasShadow="False" />
+                <StackLayout Orientation="Vertical" Grid.Row="6" Grid.Column="1">
+                    <Label Text="Camino" FontAttributes="Bold" TextColor="{DynamicResource Text}" />
+                    <Label
+                        Text="Color de fondo del camino resultante. Al dibujarlo se respeta el icono de los obstáculos y de fin"
+                        TextColor="{DynamicResource LightText}" />
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

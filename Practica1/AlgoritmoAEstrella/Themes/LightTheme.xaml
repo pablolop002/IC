@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    x:Class="AlgoritmoAEstrella.Themes.LightTheme">
+    <Color x:Key="Background">#fafafa</Color>
+    <Color x:Key="Text">#000000</Color>
+    <Color x:Key="LightText">#a9a9a9</Color>
+    <Color x:Key="AltColor">#5bff68</Color>
+    <Color x:Key="Primary-Back-Title-Color">#00c3a2</Color>
+    <Color x:Key="Primary-Title-Color">#000000</Color>
+    <Style ApplyToDerivedTypes="true" TargetType="NavigationPage">
+        <Setter Property="BarBackgroundColor" Value="{DynamicResource Primary-Back-Title-Color}"/>
+        <Setter Property="BarTextColor" Value="{StaticResource Primary-Title-Color}"/>
+    </Style>
+</ResourceDictionary>

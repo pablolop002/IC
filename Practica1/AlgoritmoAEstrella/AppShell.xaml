@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ReSharper disable once Xaml.RedundantNamespaceAlias -->
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+       mc:Ignorable="d"
+       xmlns:views="clr-namespace:AlgoritmoAEstrella.Views"
+       Title="AlgoritmoAEstrella"
+       x:Class="AlgoritmoAEstrella.AppShell">
+    <!-- Styles and Resources -->
+    <Shell.Resources>
+        <Style x:Key="BaseStyle" TargetType="Element">
+            <Setter Property="Shell.BackgroundColor" Value="{DynamicResource Primary-Back-Title-Color}" />
+            <Setter Property="Shell.ForegroundColor" Value="{DynamicResource Primary-Title-Color}" />
+            <Setter Property="Shell.TitleColor" Value="{DynamicResource Primary-Title-Color}" />
+            <Setter Property="Shell.DisabledColor" Value="{DynamicResource Primary-Title-Color}" />
+            <Setter Property="Shell.UnselectedColor" Value="{DynamicResource Primary-Title-Color}" />
+        </Style>
+        <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
+    </Shell.Resources>
+
+    <!-- Your Pages -->
+    <TabBar>
+        <ShellContent ContentTemplate="{DataTemplate views:Tablero}" />
+    </TabBar>
+</Shell>
