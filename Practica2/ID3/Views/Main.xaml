@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ID3.Views.Main"
+             BackgroundColor="{DynamicResource Background}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Clear" Clicked="Clear_OnClicked" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <Grid Padding="25,10,25,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Button x:Name="Attributes" Text="Atributos" Clicked="Attributes_OnClicked" Grid.Row="0" Grid.Column="0"
+                    BackgroundColor="{DynamicResource Alt-Back-Color}" TextColor="{DynamicResource Alt-Text-Color}" />
+            <Button x:Name="Board" Text="Tabla" Clicked="Board_OnClicked" Grid.Row="0" Grid.Column="1"
+                    IsEnabled="false"
+                    BackgroundColor="{DynamicResource Alt-Back-Color}" TextColor="{DynamicResource Alt-Text-Color}" />
+
+            <Editor x:Name="Editor" IsReadOnly="true" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+                    TextColor="{DynamicResource Text}" BackgroundColor="{DynamicResource Background}"
+                    AutoSize="TextChanges" VerticalOptions="Center" HorizontalOptions="Center" />
+
+            <Button x:Name="Generate" Text="Generar Árbol" Clicked="Generate_OnClicked" Grid.Row="2" Grid.Column="0"
+                    BackgroundColor="{DynamicResource Alt-Back-Color}" TextColor="{DynamicResource Alt-Text-Color}"
+                    IsEnabled="false" />
+            <Button x:Name="Calculate" Text="Calcular" Clicked="Calculate_OnClicked" Grid.Row="2" Grid.Column="1"
+                    BackgroundColor="{DynamicResource Alt-Back-Color}" TextColor="{DynamicResource Alt-Text-Color}"
+                    IsEnabled="false" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
