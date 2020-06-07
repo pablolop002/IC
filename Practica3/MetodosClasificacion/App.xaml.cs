@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using MetodosClasificacion.Themes;
 using MetodosClasificacion.Views;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 
 namespace MetodosClasificacion
 {
@@ -18,6 +19,9 @@ namespace MetodosClasificacion
 
         public App()
         {
+            Current.On<Xamarin.Forms.PlatformConfiguration.Android>()
+                .UseWindowSoftInputModeAdjust(WindowSoftInputModeAdjust.Resize);
+
             InitializeComponent();
 
             MainPage = new AppShell();
