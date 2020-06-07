@@ -5,6 +5,7 @@
              x:Class="MetodosClasificacion.Views.Main.Algoritmos"
              Title="Algoritmos seleccionados">
     <ContentPage.Content>
+      <ScrollView>
         <Grid ColumnSpacing="10" RowSpacing="10" Padding="10,5,10,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
@@ -63,5 +64,6 @@
                     Grid.ColumnSpan="4" IsVisible="False" Clicked="KmediasComprobar_Clicked"
                     BackgroundColor="{DynamicResource Alt-Back-Color}" TextColor="{DynamicResource Alt-Text-Color}" />
         </Grid>
+      </ScrollView>
     </ContentPage.Content>
 </ContentPage>
