@@ -7,7 +7,7 @@ using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 
 namespace MetodosClasificacion
 {
-    public partial class App : Application
+    public partial class App : Xamarin.Forms.Application
     {
         private static AppTheme _theme = AppTheme.Light;
         
