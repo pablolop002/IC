@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MetodosClasificacion.Views.Main.Loader"
+             Title="Metodos de Clasificación">
+    <ContentPage.Content>
+        <Grid ColumnSpacing="10" RowSpacing="10" Padding="10,5,10,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Button Text="Cargar clases" VerticalOptions="Center" Clicked="Clase_OnClicked" Grid.Row="0"
+                    Grid.Column="0" Grid.ColumnSpan="4" BackgroundColor="{DynamicResource Alt-Back-Color}"
+                    TextColor="{DynamicResource Alt-Text-Color}" />
+
+            <Label Text="Centros Iniciales" FontSize="Title" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" />
+            <Label Text="Iris-setosa" FontSize="Subtitle" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" />
+            <Entry x:Name="Clase1Centro1" Keyboard="Numeric" Text="4.60" Grid.Row="3" Grid.Column="0" />
+            <Entry x:Name="Clase1Centro2" Keyboard="Numeric" Text="3.00" Grid.Row="3" Grid.Column="1" />
+            <Entry x:Name="Clase1Centro3" Keyboard="Numeric" Text="4.00" Grid.Row="3" Grid.Column="2" />
+            <Entry x:Name="Clase1Centro4" Keyboard="Numeric" Text="0.00" Grid.Row="3" Grid.Column="3" />
+
+            <Label Text="Iris-versicolor" FontSize="Subtitle" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="4" />
+            <Entry x:Name="Clase2Centro1" Keyboard="Numeric" Text="6.80" Grid.Row="5" Grid.Column="0" />
+            <Entry x:Name="Clase2Centro2" Keyboard="Numeric" Text="3.40" Grid.Row="5" Grid.Column="1" />
+            <Entry x:Name="Clase2Centro3" Keyboard="Numeric" Text="4.60" Grid.Row="5" Grid.Column="2" />
+            <Entry x:Name="Clase2Centro4" Keyboard="Numeric" Text="0.70" Grid.Row="5" Grid.Column="3" />
+
+            <Label Text="K-Medias" FontSize="Title" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="4" />
+            <Label Text="Tolerancia" VerticalTextAlignment="Center" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" />
+            <Entry x:Name="KmediasTolerancia" Keyboard="Numeric" Text="0.01" Grid.Row="7" Grid.Column="2"
+                   Grid.ColumnSpan="2" />
+            <Label Text="Peso exponencial" VerticalTextAlignment="Center" Grid.Row="8" Grid.Column="0"
+                   Grid.ColumnSpan="2" />
+            <Entry x:Name="Kmediasb" Keyboard="Numeric" Text="2" Grid.Row="8" Grid.Column="2" Grid.ColumnSpan="2" />
+
+            <Label Text="Lloyd" FontSize="Title" Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="4" />
+            <Label Text="Tolerancia" VerticalTextAlignment="Center" Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="2" />
+            <Entry x:Name="LloydTolerancia" Keyboard="Numeric" Text="0.0000000001" Grid.Row="10" Grid.Column="2"
+                   Grid.ColumnSpan="2" />
+            <Label Text="Iteraciones" VerticalTextAlignment="Center" Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="2" />
+            <Entry x:Name="LloydIteraciones" Keyboard="Numeric" Text="10" Grid.Row="11" Grid.Column="2"
+                   Grid.ColumnSpan="2" />
+            <Label Text="Razón de aprendizaje" VerticalTextAlignment="Center" Grid.Row="12" Grid.Column="0"
+                   Grid.ColumnSpan="2" />
+            <Entry x:Name="LloydAprendizaje" Keyboard="Numeric" Text="0.1" Grid.Row="12" Grid.Column="2"
+                   Grid.ColumnSpan="2" />
+
+            <Button Text="Entrenar Bayes" Clicked="EntrenarBayes_OnClicked" Grid.Row="13" Grid.Column="0"
+                    Grid.ColumnSpan="2" BackgroundColor="{DynamicResource Alt-Back-Color}"
+                    TextColor="{DynamicResource Alt-Text-Color}" />
+            <Button Text="Entrenar Lloyd" Clicked="EntrenarLloyd_OnClicked" Grid.Row="13" Grid.Column="2"
+                    Grid.ColumnSpan="2" BackgroundColor="{DynamicResource Alt-Back-Color}"
+                    TextColor="{DynamicResource Alt-Text-Color}" />
+            <Button Text="Entrenar K-Medias" Clicked="EntrenarKmedias_OnClicked" Grid.Row="14" Grid.Column="0"
+                    Grid.ColumnSpan="2" BackgroundColor="{DynamicResource Alt-Back-Color}"
+                    TextColor="{DynamicResource Alt-Text-Color}" />
+            <Button Text="Entrenar Todos" Clicked="EntrenarTodos_OnClicked" Grid.Row="14" Grid.Column="2"
+                    Grid.ColumnSpan="2" BackgroundColor="{DynamicResource Alt-Back-Color}"
+                    TextColor="{DynamicResource Alt-Text-Color}" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

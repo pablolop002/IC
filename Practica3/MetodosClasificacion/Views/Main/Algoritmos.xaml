@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MetodosClasificacion.Views.Main.Algoritmos"
+             Title="Algoritmos seleccionados">
+    <ContentPage.Content>
+        <Grid ColumnSpacing="10" RowSpacing="10" Padding="10,5,10,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Label Text="Muestra" FontSize="Title" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" />
+            <Entry x:Name="Muestra1" Grid.Row="1" Grid.Column="0" TextChanged="Muestra_OnTextChanged" />
+            <Entry x:Name="Muestra2" Grid.Row="1" Grid.Column="1" TextChanged="Muestra_OnTextChanged" />
+            <Entry x:Name="Muestra3" Grid.Row="1" Grid.Column="2" TextChanged="Muestra_OnTextChanged" />
+            <Entry x:Name="Muestra4" Grid.Row="1" Grid.Column="3" TextChanged="Muestra_OnTextChanged" />
+            <Entry x:Name="MuestraClase" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" IsEnabled="False" />
+            <Button Text="Fichero de muestra" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4"
+                    Clicked="Muestra_OnClicked" BackgroundColor="{DynamicResource Alt-Back-Color}"
+                    TextColor="{DynamicResource Alt-Text-Color}" />
+
+            <Label Text="Algoritmos" FontSize="Title" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4" />
+
+            <Label x:Name="TitleBayes" Text="Bayes" FontSize="Subtitle" Grid.Row="6" Grid.Column="0"
+                   Grid.ColumnSpan="4" IsVisible="False" />
+            <Label x:Name="BayesResultado" Text=" " Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="4" IsVisible="False" />
+            <Button x:Name="ButtonBayes" Text="Comprobar con Bayes" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="4"
+                    IsVisible="False" BackgroundColor="{DynamicResource Alt-Back-Color}"
+                    Clicked="BayesComprobar_OnClicked" TextColor="{DynamicResource Alt-Text-Color}" />
+
+            <Label x:Name="TitleLloyd" Text="Lloyd" FontSize="Subtitle" Grid.Row="9" Grid.Column="0"
+                   Grid.ColumnSpan="4" IsVisible="False" />
+            <Label x:Name="LloydResultado" Text=" " Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="4" IsVisible="False" />
+            <Button x:Name="ButtonLloyd" Text="Comprobar con Lloyd" Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="4"
+                    IsVisible="False" Clicked="LloydComprobar_OnClicked"
+                    BackgroundColor="{DynamicResource Alt-Back-Color}" TextColor="{DynamicResource Alt-Text-Color}" />
+
+            <Label x:Name="TitleKmedias" Text="K-Medias" FontSize="Subtitle" Grid.Row="12" Grid.Column="0"
+                   Grid.ColumnSpan="4" IsVisible="False" />
+            <Label x:Name="KmediasResultado" Text=" " Grid.Row="13" Grid.Column="0" Grid.ColumnSpan="4"
+                   IsVisible="False" />
+            <Button x:Name="ButtonKmedias" Text="Comprobar con K-Medias" Grid.Row="14" Grid.Column="0"
+                    Grid.ColumnSpan="4" IsVisible="False" Clicked="KmediasComprobar_Clicked"
+                    BackgroundColor="{DynamicResource Alt-Back-Color}" TextColor="{DynamicResource Alt-Text-Color}" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
